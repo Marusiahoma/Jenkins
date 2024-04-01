@@ -9,10 +9,10 @@ pipeline {
             }
         }
     }
-    post {
-        success {
-            archiveArtifacts artifacts: 'test_main_page.py requriment.txt', fingerprint: true
-        }
+   post {
+    success {
+        archiveArtifacts artifacts: 'test_main_page.py, requriment.txt', fingerprint: true
     }
+}
 }
 
