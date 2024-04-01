@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'python -m venv venv'
-                sh '. venv/bin/activate && pip install -r requirements.txt'
+                sh '. /var/lib/jenkins/workspace/Project1 && pip install -r requirements.txt'
             }
         }
     }
