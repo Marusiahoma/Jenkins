@@ -11,7 +11,7 @@ pipeline {
     }
    post {
     success {
-        archiveArtifacts artifacts: 'test_main_page.py, requriment.txt', fingerprint: true
+        archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
     }
 }
 }
