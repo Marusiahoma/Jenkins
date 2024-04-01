@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker { 
-            image 'python:latest' 
-        }
-    }
+    agent any
     stages {
         stage('Build') {
             steps {
@@ -14,8 +10,9 @@ pipeline {
     }
     post {
         success {
-            archiveArtifacts artifacts: ['main.py', 'requirements.txt'], fingerprint: true
+            archiveArtifacts artifacts: ['test_main_page.py', 'requirements.txt'], fingerprint: true
         }
     }
 }
+
 
