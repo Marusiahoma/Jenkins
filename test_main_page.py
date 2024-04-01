@@ -1,5 +1,5 @@
 def main():
     print("Hello, world!")
 
-if name == "test_main_page.py":
+if __name__ == "__main__":
     main()
