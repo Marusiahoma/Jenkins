@@ -4,7 +4,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '/usr/bin/python3 -m venv venv'
-                sh '. venv/bin/activate/*.jar'
+                sh '. venv/bin/activate'
                 sh 'pip install -r requriment.txt'
             }
         }
